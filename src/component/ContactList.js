@@ -1,16 +1,11 @@
 import React from 'react'
+import { ContactCard } from './ContactCard';
 
 export const ContactList = (props) => {
 
-    const renderContacts = props.contacts.map((contacts) => {
+    const renderContacts = props.contacts.map((contact) => {
         return (
-            <div className="item">
-                <div className="contents">
-                    <div className="header">{contacts.name}</div>
-                    <div >{contacts.email}</div>
-                </div>
-                <i className="trash alternate outline icon"></i>
-            </div>
+          <ContactCard contact={contact}></ContactCard> 
         );
 });
 
